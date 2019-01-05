@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import ElementUI from 'element-ui'
+import MyBread from '@/components/cusBread.vue'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/index.css'
 import App from './App'
@@ -14,6 +15,9 @@ Vue.use(Http)
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
+
+// 定义全局组件
+Vue.component(MyBread.name, MyBread)
 
 // 处理日期格式的全局过滤器
 Vue.filter("fmtDate", (v) => {

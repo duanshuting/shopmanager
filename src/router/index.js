@@ -6,6 +6,8 @@ import Home from '@/components/home.vue'
 import Users from '@/components/users.vue'
 import Rights from '@/components/rights.vue'
 import Roles from '@/components/roles.vue'
+import Goodslist from '@/components/goodslist.vue'
+import GoodsAdd from '@/components/goodsadd.vue'
 
 // 单独引入提示信息组件
 import { Message } from 'element-ui'
@@ -30,6 +32,14 @@ const router = new Router({
       name: "roles",
       path: "/roles",
       component: Roles
+    }, {
+      name: "goods",
+      path: "/goods",
+      component: Goodslist
+    }, {
+      name: "goodsadd",
+      path: "/goods/add",
+      component: GoodsAdd
     }]
   }, {
     name: 'login',

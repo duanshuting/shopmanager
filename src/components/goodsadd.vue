@@ -81,7 +81,6 @@
             <el-upload
               class="upload-demo"
               action="http://localhost:8888/api/private/v1/upload"
-              :on-preview="handlePreview"
               :on-remove="handleRemove"
               :on-success="handleSuccess"
               :headers="headers"
@@ -189,7 +188,6 @@ export default {
     },
 
     // 图片上传时的方法
-    handlePreview(file) {},
     handleRemove(file, fileList) {
       // 从 this.form.pics 中移除当前X掉的图片
       // findIndex 

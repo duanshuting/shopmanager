@@ -10,6 +10,7 @@ import Goodslist from '@/components/goodslist.vue'
 import GoodsAdd from '@/components/goodsadd.vue'
 import Params from '@/components/params.vue'
 import Goodscate from '@/components/goodscate.vue'
+import Orders from '@/components/order.vue'
 
 // 单独引入提示信息组件
 import { Message } from 'element-ui'
@@ -50,6 +51,10 @@ const router = new Router({
       name: "categories",
       path: "/categories",
       component: Goodscate
+    }, {
+      name: "orders",
+      path: "/orders",
+      component: Orders
     }]
   }, {
     name: 'login',

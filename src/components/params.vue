@@ -62,6 +62,7 @@
 
       <el-tab-pane label="静态参数" name="2">
         <el-button type="primary" :disabled="selectedOptions.length===0">设置静态参数</el-button>
+        <!-- 表格 -->
         <el-table height="300px" :data="arrStatic" style="width: 100%">
           <el-table-column type="index" width="200" label="#"></el-table-column>
           <el-table-column prop="attr_name" label="属性名称" width="200"></el-table-column>

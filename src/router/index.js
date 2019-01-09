@@ -1,16 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Login from '@/components/login.vue'
-import Home from '@/components/home.vue'
-import Users from '@/components/users.vue'
-import Rights from '@/components/rights.vue'
-import Roles from '@/components/roles.vue'
-import Goodslist from '@/components/goodslist.vue'
-import GoodsAdd from '@/components/goodsadd.vue'
-import Params from '@/components/params.vue'
-import Goodscate from '@/components/goodscate.vue'
-import Orders from '@/components/order.vue'
+// 懒加载写法
+const Login = () => import ('@/components/login.vue')
+const Home = () => import ('@/components/home.vue')
+const Users = () => import ('@/components/users.vue')
+const Rights = () => import ('@/components/rights.vue')
+const Roles = () => import ('@/components/roles.vue')
+const Goodslist = () => import ('@/components/goodslist.vue')
+const GoodsAdd = () => import ('@/components/goodsadd.vue')
+const Params = () => import ('@/components/params.vue')
+const Goodscate = () => import ('@/components/goodscate.vue')
+const Orders = () => import ('@/components/order.vue')
+const Report = () => import ('@/components/report.vue')
 
 // 单独引入提示信息组件
 import { Message } from 'element-ui'
@@ -55,6 +57,10 @@ const router = new Router({
       name: "orders",
       path: "/orders",
       component: Orders
+    }, {
+      name: "reports",
+      path: "/reports",
+      component: Report
     }]
   }, {
     name: 'login',
